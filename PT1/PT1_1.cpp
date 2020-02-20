@@ -16,3 +16,10 @@ void    zarplata(const char *s, int days, float rascenka)
 {
     cout << s << " earned " << days * rascenka << " dollars\n";
 }
+
+// Output:
+/*
+    man earned 732 dollars
+    brother earned 793 dollars
+    sister earned 984 dollars
+*/

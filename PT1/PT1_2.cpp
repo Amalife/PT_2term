@@ -17,3 +17,10 @@ int     main()
     salary("Einstein", SD_YES);
     return 0;
 }
+
+// Output:
+/*
+    Newton earned 1530 dollars
+    Raskolnikov earned 765 dollars
+    Einstein earned 1530 dollars
+*/

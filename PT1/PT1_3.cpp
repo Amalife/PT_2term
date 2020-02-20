@@ -17,3 +17,10 @@ int     main()
     scholarship("Sidorov", 5);
     return 0;
 }
+
+// Output:
+/*
+    Petrov earned 4000 rubbles, having 4 low mark
+    Ivanov has no scholarship
+    Sidorov earned 5000 rubbles, having 5 low mark
+*/

@@ -31,3 +31,8 @@ float v(float x, float y, float z)
 {
     return x * y * z;
 }
+
+// Output:
+/*
+    sphere volume is 65.4498; cylinder volume is 127.235; parallelepiped volume is 5.6
+*/

@@ -28,3 +28,8 @@ int main()
     cout << "parallelepiped area is " << a_par << "; cylinder area is " << a_cyl << "; sphere area is " << a_sp << endl;
     return 0;
 }
+
+// Output:
+/*
+    parallelepiped area is 104.1; cylinder area is 61.9208; sphere area is 57.8053
+*/

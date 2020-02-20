@@ -56,3 +56,20 @@ void fssilka (float x[],int n, float &sum_otr, int &kol_O, float &sum_pol)
         else    
             kol_O++;
 }
+
+// Output:
+/*
+    type x[0] = 1
+    type x[1] = 2
+    type x[2] = 0
+    type x[3] = -1
+    type x[4] = -2
+    type x[5] = 0
+    type x[6] = 3
+    type x[7] = 4
+    type x[8] = 0
+    type x[9] = -3
+
+    Pointer: sum of negatives = -6; the number of zeros = 3; sum of positives = 10
+    Link: sum of negatives = -6; the number of zeros = 3; sum of positives = 10
+*/

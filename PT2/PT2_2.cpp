@@ -65,3 +65,20 @@ void fssilka (float x[],int n, float &max_el, float &min_el, int &max_num, int &
             max_num = i;
         }
 }
+
+// Output:
+/*
+    type x[0] = 1
+    type x[1] = 2
+    type x[2] = 0
+    type x[3] = -1
+    type x[4] = -2
+    type x[5] = 0
+    type x[6] = 3
+    type x[7] = 4
+    type x[8] = -3
+    type x[9] = -4
+
+    Pointer: max element x[7] = 4; min element x[9] = -4
+    Link: max element x[7] = 4; min element x[9] = -4
+*/
