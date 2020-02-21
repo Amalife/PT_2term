@@ -84,6 +84,86 @@ void fssilka (float x[],int n, float &sum_otr, int &kol_O, float &sum_pol)
     Link: sum of negatives = -6; the number of zeros = 3; sum of positives = 10
 */
 ///////////////////////////////////////////////////////////////////////////////////
+/*Пример 2.1
+То же самое что и в примере 2, только для двумерного массива
+/////////////////////////////////////////////////////////////////////////////////*/
+#include <iostream>
+
+using namespace std;
+
+const int Nx = 3;
+
+void    vvod (float x[Nx][Nx], int n, char q);
+void    fukaz(float x[Nx][Nx], int n, float *sum_otr, int *kol_O, float *sum_pol);
+void    fssilka(float x[Nx][Nx], int n, float &sum_otr, int &kol_O, float &sum_pol);
+
+int     main( )
+{
+
+    float x[Nx][Nx], s_p, s_o;
+    int k_nul;
+
+    vvod (x, Nx, 'x');
+    fukaz (x, Nx, &s_o, &k_nul, &s_p);
+    cout << "Pointer: sum of negatives = " << s_o << "; the number of zeros = " << k_nul << "; sum of positives = " << s_p << endl;
+    fssilka(x, Nx, s_o, k_nul, s_p);
+    cout << "Link: sum of negatives = " << s_o << "; the number of zeros = " << k_nul << "; sum of positives = " << s_p << endl;
+    return 0;
+}
+
+void vvod(float x[Nx][Nx], int n, char q)
+{
+    for (int j = 0; j < n; j++)
+        for (int i=0; i < n; i++)
+        {  
+            cout << "type " << q << "[" << j << "]" << "[" << i << "] = ";
+            cin >> x[j][i];
+            cout << endl;
+        }
+}
+
+void fukaz(float x[Nx][Nx], int n, float *sum_otr, int *kol_O, float *sum_pol)
+{
+    *sum_otr = 0;    
+    *kol_O = 0;   
+    *sum_pol = 0;
+    for (int j = 0; j < n; j++)
+        for (int i=0; i < n; i++)
+            if (x[j][i] < 0)   
+                *sum_otr += x[j][i];
+            else if (x[j][i] > 0)
+                *sum_pol += x[j][i];
+            else   
+                *kol_O += 1;
+}
+void fssilka (float x[Nx][Nx],int n, float &sum_otr, int &kol_O, float &sum_pol)
+{
+    sum_otr=kol_O=sum_pol=0;
+    for (int j = 0; j < n; j++)
+        for (int i= 0; i < n; i++)
+            if(x[j][i] < 0)   
+                sum_otr += x[j][i];
+            else if (x[j][i] > 0)
+                sum_pol += x[j][i];
+            else    
+                kol_O++;
+}
+
+// Output:
+/*
+    type x[0][0] = 1
+    type x[0][1] = 2
+    type x[0][2] = 0
+    type x[1][0] = -1
+    type x[1][1] = -2
+    type x[1][2] = 0
+    type x[2][0] = 1
+    type x[2][1] = 1
+    type x[2][2] = 0
+    Pointer: sum of negatives = -3; the number of zeros = 3; sum of positives = 5
+    Link: sum of negatives = -3; the number of zeros = 3; sum of positives = 5
+*/
+///////////////////////////////////////////////////////////////////////////////////
 /*Пример 2
 Для кaждого из трёх одномерных мaccивов нaйти нaибольший, нaименьший элементы и их номерa. В программе предуcмотреть отдельную функцию, 
 в которой вычисляются все необходимые значения для одного массива и возвращаются с помощью ссылок. 
